@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jianying-ai-mcp"
+version = "0.3.0"
+description = "Video-aware, batch-first MCP server for safe Jianying draft generation and template reuse"
+requires-python = ">=3.12"
+dependencies = [
+  "mcp>=1.12,<2",
+  "pyJianYingDraft==0.3.0",
+]
+
+[project.optional-dependencies]
+video-url = ["yt-dlp"]
+
+[project.scripts]
+jianying-ai-mcp = "jianying_ai_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

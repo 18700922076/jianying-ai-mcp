@@ -1,0 +1,15 @@
+.venv/
+work/
+.uv-cache/
+.build/
+.jianying-mcp/
+__pycache__/
+*.py[cod]
+*.egg-info/
+backups/
+vendor/
+scripts/
+jianying_boundary_current.png
+screen_before_refresh.png
+.agents/
+.codex/

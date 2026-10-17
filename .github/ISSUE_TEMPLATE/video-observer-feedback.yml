@@ -1,0 +1,64 @@
+name: 视频观察与剪映草稿反馈
+description: 报告视频理解、剪辑规划或草稿生成问题
+title: "[反馈] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传客户素材、API Key 或包含隐私的完整日志。
+  - type: input
+    id: client_model
+    attributes:
+      label: 客户端与模型
+      placeholder: Codex / OpenCode / DeepSeek Harness；模型名称
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      placeholder: Windows、剪映版本、Python 版本
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: 测试素材概况
+      description: 只写时长、分辨率、字幕情况和内容类型，不要上传敏感素材。
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: 输入要求与分析参数
+      description: 包括 detail、max_frames、resolution、start/end。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果与错误
+      description: 可粘贴已脱敏的阶段日志或错误信息。
+    validations:
+      required: true
+  - type: input
+    id: cost
+    attributes:
+      label: 耗时或 Token（可选）
+  - type: dropdown
+    id: draft_opened
+    attributes:
+      label: 生成草稿能否在剪映打开
+      options:
+        - 未测试
+        - 可以且显示正常
+        - 可以但显示有差异
+        - 无法打开
+    validations:
+      required: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "剪映 AI 剪辑"
+  short_description: "理解视频并将自然语言要求转成安全可复用的剪映草稿"
+  default_prompt: "使用 $jianying-ai-editor 分析我的视频素材，根据要求规划并生成剪映草稿。"
